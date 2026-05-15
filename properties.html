@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Properties | Horizon Properties</title>
+<meta name="description" content="Browse luxury residential and commercial properties across India with Horizon Properties."/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="pages.css"/>
+</head>
+<body>
+
+<nav id="navbar" class="scrolled"><div class="nav-container"><a href="index.html" class="nav-logo"><div class="logo-icon"><svg width="48" height="48" viewBox="0 0 90 90" fill="none"><defs><linearGradient id="lg1" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C9A96E"/><stop offset="100%" stop-color="#F0D49A"/></linearGradient></defs><polygon points="45,4 83,25 83,65 45,86 7,65 7,25" fill="rgba(201,169,110,0.1)" stroke="url(#lg1)" stroke-width="2"/><text x="45" y="56" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="700" font-size="28" fill="url(#lg1)">H</text></svg></div><div class="logo-text"><span class="logo-name">HORIZON</span><span class="logo-tagline">PROPERTIES</span></div></a><ul class="nav-links"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="properties.html" class="nav-link active">Properties</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul><a href="contact.html" class="nav-cta">Get Consultation</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div><div class="mobile-drawer" id="mobile-drawer"><div class="drawer-header"><div class="logo-icon"><svg width="40" height="40" viewBox="0 0 90 90" fill="none"><defs><linearGradient id="lg2" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C9A96E"/><stop offset="100%" stop-color="#F0D49A"/></linearGradient></defs><polygon points="45,4 83,25 83,65 45,86 7,65 7,25" fill="rgba(201,169,110,0.1)" stroke="url(#lg2)" stroke-width="2"/><text x="45" y="56" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="700" font-size="28" fill="url(#lg2)">H</text></svg></div><div class="logo-text"><span class="logo-name">HORIZON</span><span class="logo-tagline">PROPERTIES</span></div><button class="drawer-close" id="drawer-close"><i class="fa fa-times"></i></button></div><ul class="drawer-links"><li><a href="index.html"><i class="fa fa-home"></i> Home</a></li><li><a href="properties.html"><i class="fa fa-building"></i> Properties</a></li><li><a href="services.html"><i class="fa fa-concierge-bell"></i> Services</a></li><li><a href="about.html"><i class="fa fa-users"></i> About Us</a></li><li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li></ul><a href="contact.html" class="drawer-cta">Get Free Consultation</a><div class="drawer-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-linkedin"></i></a></div></div><div class="drawer-overlay" id="drawer-overlay"></div></nav>
+
+<section class="page-hero"><div class="page-hero-overlay"></div><div class="page-hero-content"><span class="section-tag">✦ Explore</span><h1 class="page-hero-title">Our <span class="gold-text">Properties</span></h1><p>Discover handpicked luxury residences and commercial spaces across India</p></div></section>
+
+<section class="section"><div class="container">
+<div class="prop-filters-bar">
+  <div class="prop-filter-group"><label>Location</label><select id="f-location"><option value="">All Cities</option><option>Mumbai</option><option>Bangalore</option><option>Gurgaon</option><option>Delhi</option><option>Pune</option></select></div>
+  <div class="prop-filter-group"><label>Type</label><select id="f-type"><option value="">All Types</option><option value="villa">Villa</option><option value="apartment">Apartment</option><option value="penthouse">Penthouse</option><option value="commercial">Commercial</option></select></div>
+  <div class="prop-filter-group"><label>Budget</label><select id="f-budget"><option value="">Any Budget</option><option>Under ₹2Cr</option><option>₹2Cr – ₹5Cr</option><option>₹5Cr – ₹10Cr</option><option>₹10Cr+</option></select></div>
+  <button class="search-btn" onclick="filterProps()"><i class="fa fa-search"></i> Filter</button>
+</div>
+<div class="filter-tabs" style="margin-top:40px">
+  <button class="filter-btn active" data-filter="all">All Properties</button>
+  <button class="filter-btn" data-filter="villa">Villas</button>
+  <button class="filter-btn" data-filter="apartment">Apartments</button>
+  <button class="filter-btn" data-filter="penthouse">Penthouses</button>
+  <button class="filter-btn" data-filter="commercial">Commercial</button>
+</div>
+<div class="properties-grid" id="properties-grid" style="margin-top:16px"></div>
+</div></section>
+
+<section class="cta-banner"><div class="cta-3d-bg"><div class="cta-orb cta-orb-1"></div><div class="cta-orb cta-orb-2"></div></div><div class="container"><div class="cta-content"><h2>Can't Find What You're <span class="gold-text">Looking For?</span></h2><p>Our expert advisors will help you find the perfect property tailored to your needs.</p><div class="cta-actions"><a href="contact.html" class="btn-primary">Talk to an Expert</a><a href="tel:+918800123456" class="btn-outline-light"><i class="fa fa-phone"></i> +91 88001 23456</a></div></div></div></section>
+
+<footer class="footer"><div class="footer-glow"></div><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="footer-logo"><svg width="44" height="44" viewBox="0 0 90 90" fill="none"><defs><linearGradient id="lg3" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C9A96E"/><stop offset="100%" stop-color="#F0D49A"/></linearGradient></defs><polygon points="45,4 83,25 83,65 45,86 7,65 7,25" fill="rgba(201,169,110,0.1)" stroke="url(#lg3)" stroke-width="2"/><text x="45" y="56" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="700" font-size="28" fill="url(#lg3)">H</text></svg><div><span class="logo-name">HORIZON</span><span class="logo-tagline">PROPERTIES</span></div></div><p>India's most trusted luxury real estate consultancy since 2009.</p><div class="footer-social"><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a><a href="#"><i class="fab fa-youtube"></i></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="properties.html">Properties</a></li><li><a href="services.html">Services</a></li><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Property Types</h4><ul><li><a href="#">Luxury Villas</a></li><li><a href="#">Penthouses</a></li><li><a href="#">Apartments</a></li><li><a href="#">Commercial</a></li><li><a href="#">Plots & Land</a></li></ul></div><div class="footer-col"><h4>Contact Us</h4><ul class="footer-contact"><li><i class="fa fa-map-marker-alt"></i>14th Floor, Horizon Tower,<br/>DLF Cyber City, Gurgaon – 122002</li><li><i class="fa fa-phone"></i><a href="tel:+918800123456">+91 88001 23456</a></li><li><i class="fa fa-envelope"></i><a href="mailto:info@horizonproperties.in">info@horizonproperties.in</a></li></ul></div></div><div class="footer-bottom"><p>© 2024 Horizon Properties Pvt. Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></footer>
+<button class="back-to-top" id="back-to-top"><i class="fa fa-chevron-up"></i></button>
+<script src="main.js"></script>
+<script>
+// ===== ALL PROPERTIES DATA (corrected types) =====
+const allProps = [
+  {id:1, name:'Skyline Penthouse',    location:'Bandra West, Mumbai',     price:'₹8.5 Cr',  priceNum:8.5,  beds:4, baths:4, area:'3,800', type:'penthouse', badge:'For Sale',   img:'images/property1.png'},
+  {id:2, name:'Villa Serenita',       location:'Whitefield, Bangalore',   price:'₹5.2 Cr',  priceNum:5.2,  beds:5, baths:4, area:'5,200', type:'villa',      badge:'For Sale',   img:'images/property2.png'},
+  {id:3, name:'Horizon Beachfront',   location:'Juhu, Mumbai',            price:'₹12 Cr',   priceNum:12,   beds:6, baths:5, area:'8,000', type:'villa',      badge:'Premium',    img:'images/property3.png'},
+  {id:4, name:'Prestige Business Hub',location:'Cyber City, Gurgaon',     price:'₹3.8 Cr',  priceNum:3.8,  beds:null,baths:null,area:'4,500',type:'commercial',badge:'Commercial', img:'images/property4.png'},
+  {id:5, name:'Royal Oak Apartments', location:'Koramangala, Bangalore',  price:'₹1.9 Cr',  priceNum:1.9,  beds:3, baths:2, area:'1,850', type:'apartment',  badge:'For Sale',   img:'images/hero_bg.png'},
+  {id:6, name:'The Grand Residency',  location:'DLF Phase 5, Gurgaon',    price:'₹6.7 Cr',  priceNum:6.7,  beds:4, baths:3, area:'4,200', type:'villa',      badge:'New Launch', img:'images/property2.png'},
+  {id:7, name:'Emerald Heights',      location:'Powai, Mumbai',           price:'₹2.4 Cr',  priceNum:2.4,  beds:3, baths:2, area:'1,650', type:'apartment',  badge:'For Sale',   img:'images/property1.png'},
+  {id:8, name:'The Sky Villa',        location:'Jubilee Hills, Hyderabad',price:'₹9.5 Cr',  priceNum:9.5,  beds:5, baths:5, area:'6,800', type:'villa',      badge:'Exclusive',  img:'images/property3.png'},
+];
+
+// Render on load
+renderProperties(allProps);
+
+// Budget range helper
+function budgetMatch(priceNum, budgetStr) {
+  if (!budgetStr) return true;
+  if (budgetStr === 'Under \u20b92Cr')     return priceNum < 2;
+  if (budgetStr === '\u20b92Cr \u2013 \u20b95Cr')  return priceNum >= 2 && priceNum <= 5;
+  if (budgetStr === '\u20b95Cr \u2013 \u20b910Cr') return priceNum > 5 && priceNum <= 10;
+  if (budgetStr === '\u20b910Cr+')        return priceNum > 10;
+  return true;
+}
+
+// Search-bar Filter button
+function filterProps() {
+  const locVal    = document.getElementById('f-location').value.trim().toLowerCase();
+  const typeVal   = document.getElementById('f-type').value.trim().toLowerCase();
+  const budgetVal = document.getElementById('f-budget').value.trim();
+
+  const filtered = allProps.filter(p => {
+    const locMatch    = !locVal  || p.location.toLowerCase().includes(locVal);
+    const typeMatch   = !typeVal || p.type === typeVal;
+    const budgetMatch_ = budgetMatch(p.priceNum, budgetVal);
+    return locMatch && typeMatch && budgetMatch_;
+  });
+
+  renderProperties(filtered.length ? filtered : allProps);
+
+  // Show "no results" message if empty
+  const grid = document.getElementById('properties-grid');
+  if (!filtered.length) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 20px;"><i class="fa fa-search" style="font-size:3rem;color:var(--gold);opacity:.4;margin-bottom:16px"></i><p style="color:var(--text-muted)">No properties found for this search. Showing all listings.</p></div>' + grid.innerHTML;
+  }
+
+  // Reset pill filter tabs to "All"
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+  if (allBtn) allBtn.classList.add('active');
+
+  // Scroll to grid
+  document.getElementById('properties-grid').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+// Pill filter tabs — reset search dropdowns when used
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    // Reset search bar dropdowns
+    document.getElementById('f-location').value = '';
+    document.getElementById('f-type').value     = '';
+    document.getElementById('f-budget').value   = '';
+  });
+});
+</script>
+</body></html>
+
+

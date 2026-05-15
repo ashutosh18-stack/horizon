@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horizon Properties | Luxury Real Estate Consultancy</title>
+  <meta name="description" content="Horizon Properties - India's premium real estate consultancy. Find your dream home, luxury villas, commercial spaces and more."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="preloader-logo">
+      <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pg1" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#C9A96E"/>
+            <stop offset="100%" stop-color="#F0D49A"/>
+          </linearGradient>
+        </defs>
+        <polygon class="hex-anim" points="45,5 82,25 82,65 45,85 8,65 8,25" fill="none" stroke="url(#pg1)" stroke-width="2.5"/>
+        <polygon class="hex-anim-inner" points="45,15 72,30 72,60 45,75 18,60 18,30" fill="none" stroke="url(#pg1)" stroke-width="1" opacity="0.4"/>
+        <text x="45" y="52" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="700" font-size="22" fill="url(#pg1)">H</text>
+      </svg>
+    </div>
+    <div class="preloader-text">
+      <span class="pre-brand">HORIZON</span>
+      <span class="pre-sub">PROPERTIES</span>
+    </div>
+    <div class="preloader-bar"><div class="preloader-fill"></div></div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav id="navbar">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" id="nav-logo">
+      <div class="logo-icon">
+        <svg width="48" height="48" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#C9A96E"/>
+              <stop offset="100%" stop-color="#F0D49A"/>
+            </linearGradient>
+          </defs>
+          <polygon points="45,4 83,25 83,65 45,86 7,65 7,25" fill="rgba(201,169,110,0.1)" stroke="url(#lg1)" stroke-width="2"/>
+          <text x="45" y="56" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="700" font-size="28" fill="url(#lg1)">H</text>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">HORIZON</span>
+        <span class="logo-tagline">PROPERTIES</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="properties.html" class="nav-link">Properties</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Nav CTA -->
+    <a href="contact.html" class="nav-cta">Get Consultation</a>
+
+    <!-- Hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="logo-icon">
+        <svg width="40" height="40" viewBox="0 0 90 90" fill="none">
+          <defs><linearGradient id="lg2" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C9A96E"/><stop offset="100%" stop-color="#F0D49A"/></linearGradient></defs>
+          <polygon points="45,4 83,25 83,65 45,86 7,65 7,25" fill="rgba(201,169,110,0.1)" stroke="url(#lg2)" stroke-width="2"/>
+          <text x="45" y="56" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="700" font-size="28" fill="url(#lg2)">H</text>
+        </svg>
+      </div>
+      <div class="logo-text"><span class="logo-name">HORIZON</span><span class="logo-tagline">PROPERTIES</span></div>
+      <button class="drawer-close" id="drawer-close"><i class="fa fa-times"></i></button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="properties.html"><i class="fa fa-building"></i> Properties</a></li>
+      <li><a href="services.html"><i class="fa fa-concierge-bell"></i> Services</a></li>
+      <li><a href="about.html"><i class="fa fa-users"></i> About Us</a></li>
+      <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+    </ul>
+    <a href="contact.html" class="drawer-cta">Get Free Consultation</a>
+    <div class="drawer-social">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+</nav>
+
+<!-- ============ HERO SECTION ============ -->
+<section id="hero" class="hero-section">
+  <div class="hero-bg" id="hero-bg">
+    <img src="images/hero_bg.png" alt="Luxury Property" class="hero-bg-img"/>
+    <div class="hero-overlay"></div>
+    <!-- Floating 3D particles -->
+    <div class="particles" id="particles"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge"><span>✦ Premium Real Estate Consultancy</span></div>
+    <h1 class="hero-title">
+      Find Your <span class="gold-text">Dream</span><br/>
+      Property With Us
+    </h1>
+    <p class="hero-subtitle">Horizon Properties — where luxury meets opportunity. We connect you with India's finest residential and commercial spaces.</p>
+
+    <!-- Search Bar -->
+    <div class="hero-search">
+      <div class="search-tabs">
+        <button class="search-tab active" data-type="buy">Buy</button>
+        <button class="search-tab" data-type="rent">Rent</button>
+        <button class="search-tab" data-type="commercial">Commercial</button>
+      </div>
+      <div class="search-bar">
+        <div class="search-field">
+          <i class="fa fa-map-marker-alt"></i>
+          <input type="text" placeholder="Enter city, locality or project…" id="search-input"/>
+        </div>
+        <div class="search-select">
+          <select>
+            <option>Property Type</option>
+            <option>Villa</option>
+            <option>Apartment</option>
+            <option>Penthouse</option>
+            <option>Commercial</option>
+            <option>Plot</option>
+          </select>
+        </div>
+        <div class="search-select">
+          <select>
+            <option>Budget</option>
+            <option>₹50L – ₹1Cr</option>
+            <option>₹1Cr – ₹3Cr</option>
+            <option>₹3Cr – ₹5Cr</option>
+            <option>₹5Cr+</option>
+          </select>
+        </div>
+        <button class="search-btn"><i class="fa fa-search"></i> Search</button>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero-stats">
+      <div class="stat-item"><span class="stat-num" data-target="2500">0</span><span class="stat-plus">+</span><span class="stat-label">Properties Sold</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-target="15">0</span><span class="stat-plus">+</span><span class="stat-label">Years Experience</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-target="98">0</span><span class="stat-plus">%</span><span class="stat-label">Client Satisfaction</span></div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><span class="stat-num" data-target="50">0</span><span class="stat-plus">+</span><span class="stat-label">Cities Covered</span></div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Scroll Down</span>
+  </div>
+</section>
+
+<!-- ============ FEATURED PROPERTIES ============ -->
+<section id="featured" class="section featured-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">✦ Our Listings</span>
+      <h2 class="section-title">Featured <span class="gold-text">Properties</span></h2>
+      <p class="section-subtitle">Handpicked luxury properties curated for the discerning buyer</p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="villa">Villa</button>
+      <button class="filter-btn" data-filter="apartment">Apartment</button>
+      <button class="filter-btn" data-filter="penthouse">Penthouse</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
+    </div>
+
+    <div class="properties-grid" id="properties-grid">
+      <!-- Property Cards injected by JS -->
+    </div>
+
+    <div class="section-cta">
+      <a href="properties.html" class="btn-outline">View All Properties <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="section why-section">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-left">
+        <span class="section-tag">✦ Why Horizon</span>
+        <h2 class="section-title">The Horizon <span class="gold-text">Advantage</span></h2>
+        <p class="why-desc">With over 15 years of excellence in real estate, Horizon Properties has redefined property consultancy in India. We combine market intelligence, personalized service, and an unmatched portfolio.</p>
+        <div class="why-features">
+          <div class="why-feat"><div class="feat-icon"><i class="fa fa-shield-alt"></i></div><div><h4>Verified Listings</h4><p>Every property is legally verified and RERA compliant</p></div></div>
+          <div class="why-feat"><div class="feat-icon"><i class="fa fa-handshake"></i></div><div><h4>End-to-End Support</h4><p>From site visit to registration, we handle everything</p></div></div>
+          <div class="why-feat"><div class="feat-icon"><i class="fa fa-chart-line"></i></div><div><h4>Market Expertise</h4><p>Deep local knowledge with pan-India reach</p></div></div>
+          <div class="why-feat"><div class="feat-icon"><i class="fa fa-lock"></i></div><div><h4>Transparent Pricing</h4><p>No hidden charges, fair deals every time</p></div></div>
+        </div>
+        <a href="about.html" class="btn-primary">Learn About Us <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="why-right">
+        <div class="why-card-3d" id="why-card">
+          <div class="why-img-wrap">
+            <img src="images/property2.png" alt="Luxury Villa" class="why-img"/>
+            <div class="why-badge-float">
+              <i class="fa fa-star"></i> Premium Listing
+            </div>
+          </div>
+          <div class="why-card-stat">
+            <div class="wcs-item"><span class="wcs-num">₹4.8Cr</span><span class="wcs-lbl">Avg. Deal Value</span></div>
+            <div class="wcs-divider"></div>
+            <div class="wcs-item"><span class="wcs-num">48h</span><span class="wcs-lbl">Avg. Response</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEO SECTION ============ -->
+<section class="section video-section">
+  <div class="video-bg-overlay"></div>
+  <div class="container">
+    <div class="video-content">
+      <span class="section-tag light">✦ Horizon Story</span>
+      <h2 class="section-title light">Experience Luxury <span class="gold-text">Living</span></h2>
+      <p class="video-desc">Take a cinematic tour of our flagship properties and discover what sets Horizon apart.</p>
+      <button class="play-btn" id="play-btn">
+        <div class="play-ripple"></div>
+        <i class="fa fa-play"></i>
+      </button>
+      <span class="play-label">Watch Our Story</span>
+    </div>
+  </div>
+  <!-- Video Modal -->
+  <div class="video-modal" id="video-modal">
+    <div class="video-modal-inner">
+      <button class="modal-close" id="modal-close"><i class="fa fa-times"></i></button>
+      <div class="video-wrapper">
+        <iframe id="yt-frame" width="100%" height="100%" src="" title="Horizon Properties" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES PREVIEW ============ -->
+<section class="section services-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">✦ What We Offer</span>
+      <h2 class="section-title">Our <span class="gold-text">Services</span></h2>
+      <p class="section-subtitle">Comprehensive real estate solutions tailored to your needs</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fa fa-home"></i></div>
+        <h3>Residential Sales</h3>
+        <p>Buy or sell luxury villas, apartments and independent homes with our expert guidance.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa fa-city"></i></div>
+        <h3>Commercial Leasing</h3>
+        <p>Premium office spaces, retail outlets and co-working hubs across major cities.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa fa-key"></i></div>
+        <h3>Property Management</h3>
+        <p>Hassle-free management of your investment properties with guaranteed returns.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa fa-file-contract"></i></div>
+        <h3>Legal & Documentation</h3>
+        <p>Complete title verification, RERA compliance, and registration assistance.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa fa-rupee-sign"></i></div>
+        <h3>Home Loans</h3>
+        <p>Access best-in-class home loan offers through our banking partnerships.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa fa-chart-bar"></i></div>
+        <h3>Investment Advisory</h3>
+        <p>Data-driven real estate investment advisory for maximum ROI.</p>
+        <a href="services.html" class="service-link">Learn More <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">✦ Client Stories</span>
+      <h2 class="section-title">What Our <span class="gold-text">Clients Say</span></h2>
+    </div>
+    <div class="swiper testimonial-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fa fa-quote-left"></i></div>
+            <p>"Horizon Properties made our dream home a reality. Their team was professional, prompt and absolutely committed to finding us the perfect villa in Gurgaon."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">RS</div>
+              <div><strong>Rahul Sharma</strong><span>Purchased a Villa, Gurgaon</span></div>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fa fa-quote-left"></i></div>
+            <p>"Exceptional service! The team at Horizon guided us through every step of buying our first luxury apartment. Transparent, honest, and truly caring."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">PG</div>
+              <div><strong>Priya Gupta</strong><span>Bought 3BHK, Mumbai</span></div>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fa fa-quote-left"></i></div>
+            <p>"As an NRI investor, I was nervous about investing in Indian real estate. Horizon Properties handled everything seamlessly — a truly world-class experience."</p>
+            <div class="testi-author">
+              <div class="testi-avatar">AK</div>
+              <div><strong>Arjun Kapoor</strong><span>NRI Investor, Dubai</span></div>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonial-card">
+            <div class="testi-quote"><i class="fa fa-quote-left"></i></div>
+            <p>"Sold my commercial property in Bangalore at a price beyond expectations. Horizon's market expertise is unmatched. Highly recommended!"</p>
+            <div class="testi-author">
+              <div class="testi-avatar">SM</div>
+              <div><strong>Sanjay Mehta</strong><span>Sold Office Space, Bangalore</span></div>
+            </div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-banner">
+  <div class="cta-3d-bg">
+    <div class="cta-orb cta-orb-1"></div>
+    <div class="cta-orb cta-orb-2"></div>
+  </div>
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Find Your <span class="gold-text">Dream Property?</span></h2>
+      <p>Book a free consultation with our expert advisors today. No commitment required.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn-primary">Book Consultation</a>
+        <a href="tel:+918800123456" class="btn-outline-light"><i class="fa fa-phone"></i> +91 88001 23456</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <svg width="44" height="44" viewBox="0 0 90 90" fill="none">
+            <defs><linearGradient id="lg3" x1="0" y1="0" x2="90" y2="90" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#C9A96E"/><stop offset="100%" stop-color="#F0D49A"/></linearGradient></defs>
+            <polygon points="45,4 83,25 83,65 45,86 7,65 7,25" fill="rgba(201,169,110,0.1)" stroke="url(#lg3)" stroke-width="2"/>
+            <text x="45" y="56" text-anchor="middle" font-family="Cormorant Garamond,serif" font-weight="700" font-size="28" fill="url(#lg3)">H</text>
+          </svg>
+          <div><span class="logo-name">HORIZON</span><span class="logo-tagline">PROPERTIES</span></div>
+        </div>
+        <p>India's most trusted luxury real estate consultancy, serving discerning buyers and sellers since 2009.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Property Types</h4>
+        <ul>
+          <li><a href="properties.html">Luxury Villas</a></li>
+          <li><a href="properties.html">Penthouses</a></li>
+          <li><a href="properties.html">Apartments</a></li>
+          <li><a href="properties.html">Commercial Spaces</a></li>
+          <li><a href="properties.html">Plots & Land</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa fa-map-marker-alt"></i> 14th Floor, Horizon Tower,<br/>DLF Cyber City, Gurgaon – 122002</li>
+          <li><i class="fa fa-phone"></i> <a href="tel:+918800123456">+91 88001 23456</a></li>
+          <li><i class="fa fa-envelope"></i> <a href="mailto:info@horizonproperties.in">info@horizonproperties.in</a></li>
+          <li><i class="fa fa-clock"></i> Mon–Sat: 9AM – 7PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Horizon Properties Pvt. Ltd. All rights reserved. | RERA Reg. No. HRERA-PKL-ERE-2009-0047</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Disclaimer</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="back-to-top"><i class="fa fa-chevron-up"></i></button>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
